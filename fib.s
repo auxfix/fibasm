@@ -2,6 +2,11 @@ global  _start
 
 section .text
 _start:
-    mov al, 0
-    mov bl, 1
-    xchg rbx, rax
+    xor rbx, rbx
+    xor rax, rax
+    inc rbx,
+    mov rcx, 10
+loopFib:
+    add rax, rbx
+    xchg rax, rbx
+    loop loopFib		
