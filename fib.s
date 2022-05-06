@@ -9,7 +9,7 @@ section .bss
 section .text
 int_to_string:
   add esi,9
-  mov byte [esi],0    ; String terminator
+  mov byte [esi], 0ah    ; String terminator
 
   mov ebx,10
 .next_digit:
@@ -50,7 +50,7 @@ loopFib:
     pop rbx
     pop rax          ;	
     cmp rbx, 10		; do rbx - 10
-    js loopFib		; jump if result is <0
+    js loopFib		; jump if result is <0   
     mov rax, 60
     mov rdi, 0
     syscall	
